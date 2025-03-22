@@ -1,33 +1,10 @@
+// bot.js
 const TelegramBot = require('node-telegram-bot-api');
+const colleges = require('./collegeData'); // Import the college data
 
 // Replace with your Telegram Bot Token from BotFather
 const token = '7585448471:AAEvagJcBplpgm__SNxwxqQc0n5S_1LxLlw';
 const bot = new TelegramBot(token, { polling: true });
-
-// Sample dataset of colleges
-const colleges = [
-    {
-        name: "IIT Bombay",
-        min_inter_marks: 85,
-        min_btech_cgpa: 8.0,
-        min_gate_score: 700,
-        branch: "CSE"
-    },
-    {
-        name: "IIT Delhi",
-        min_inter_marks: 80,
-        min_btech_cgpa: 7.5,
-        min_gate_score: 650,
-        branch: "Mechanical"
-    },
-    {
-        name: "NIT Trichy",
-        min_inter_marks: 75,
-        min_btech_cgpa: 7.0,
-        min_gate_score: 600,
-        branch: "ECE"
-    }
-];
 
 // Store user data temporarily
 let userData = {};
